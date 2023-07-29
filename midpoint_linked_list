@@ -1,0 +1,22 @@
+For a given singly linked list of integers, find and return the node present at the middle of the list.
+
+Code::::
+
+Node *midPoint(Node *head)
+{
+	if(head==NULL){
+		return head;
+	}
+	if(head->next==NULL){
+		return head;
+	}
+    Node * temp=head;
+	Node *first=head->next;
+	int c=0;
+	while(first!=NULL&&first->next!=NULL){
+		temp=temp->next;
+		first=first->next->next;
+		
+	}
+	return temp;
+}
